@@ -1,0 +1,10 @@
+{
+  "_comment": "Parametres du backtest kNN — modifier ici pour varier les scenarios sans toucher au code",
+  "capital_initial":  30000.0,
+  "capital_engage":   15000.0,
+  "tp_pct":           0.015,
+  "sl_pct":           0.006,
+  "plafond_lot":      5000.0,
+  "seuil_minimal":    2500.0,
+  "seed":             42
+}

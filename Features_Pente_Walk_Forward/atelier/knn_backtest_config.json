@@ -1,0 +1,30 @@
+{
+  "_comment": "Parametres du backtest kNN \u2014 modifier ici pour varier les scenarios sans toucher au code",
+  "capital_initial": 30000.0,
+  "capital_engage": 15000.0,
+  "tp_pct": 0.015,
+  "sl_pct": 0.006,
+  "plafond_lot": 5000.0,
+  "seuil_minimal": 2500.0,
+  "seed": 42,
+  "prix_min": 9.0,
+  "frais": {
+    "_comment": "Valeurs de frais A VERIFIER (IBKR Pro tiered + frais reglementaires US) avant tout run de production.",
+    "actif": true,
+    "commission_par_action": 0.0035,
+    "commission_min_ordre": 0.35,
+    "commission_max_pct_valeur": 0.01,
+    "frais_clearing_par_action": 0.0002,
+    "sec_fee_par_million": 15.1,
+    "taf_par_action": 0.000166,
+    "taf_plafond_ordre": 8.0
+  },
+  "slippage": {
+    "_comment": "Fractions (0.0005 = 0.05%). A calibrer avec les fills reels du paper trading (avgFillPrice vs Open).",
+    "actif": true,
+    "entree_open": 0.0005,
+    "sortie_tp": 0.0,
+    "sortie_sl": 0.001,
+    "sortie_gap": 0.001
+  }
+}

@@ -1,0 +1,14 @@
+Description des colonnes :
+date :          Date de la prédiction
+symbol :        Ticker concerné par la prédiction
+T :             param 1 confidentiel
+Q :             param 2 confidentiel
+M :             param 3 confidentiel
+A :             param 4 confidentiel
+N :             param 5 confidentiel
+target :        Ce que les params induisent réellement
+prediction :    Ce que le modèle a prédit
+Open :          Open du jour de la prédiction (n.b. il faudrait plutôt de ce soit celui du lendemain)
+High :          High du jour de la prédiction (n.b. il faudrait plutôt de ce soit celui du lendemain)
+Low :           Low du jour de la prédiction (n.b. il faudrait plutôt de ce soit celui du lendemain)
+Close :         Close du jour de la prédiction (n.b. il faudrait plutôt de ce soit celui du lendemain)

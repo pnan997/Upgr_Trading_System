@@ -1,0 +1,86 @@
+2026-06-11 14:28:44,776 [INFO] === Demarrage enrich_predictions_with_ohlcv ===
+2026-06-11 14:28:44,776 [INFO] CSV source   : /app/working/workspaces/FinCodeur95/duckdb/Features_Pente/test_features_with_predictions.csv
+2026-06-11 14:28:44,776 [INFO] CSV sortie   : /app/working/workspaces/FinCodeur95/duckdb/Features_Pente/test_features_with_predictions_ohlcv.csv
+2026-06-11 14:28:44,776 [INFO] Log          : /app/working/workspaces/FinCodeur95/duckdb/Features_Pente/enrich_predictions.log
+2026-06-11 14:28:44,776 [INFO] Base         : /app/working/workspaces/FinCodeur95/duckdb/tickers_meta.db
+2026-06-11 14:28:44,776 [INFO] Taille lot   : 50 symbols
+2026-06-11 14:28:44,776 [INFO] Lecture du CSV source ...
+2026-06-11 14:28:45,156 [INFO]   lignes lues       : 859,633
+2026-06-11 14:28:45,156 [INFO]   symbols distincts : 3,025
+2026-06-11 14:28:45,157 [INFO]   plage temporelle  : 2025-03-25 -> 2026-05-27
+2026-06-11 14:28:45,548 [INFO]   dates par symbol  : indexees (moyenne 284.2)
+2026-06-11 14:28:45,548 [INFO] Verification de l existence des tables ohlcv_<symbol> ...
+2026-06-11 14:28:45,718 [INFO]   3,025 tables ohlcv_* confirmees en BDD
+2026-06-11 14:28:45,718 [INFO] Demarrage de l enrichissement par lots ...
+2026-06-11 14:28:45,852 [INFO]   lot    1/61 (50 symbols, ex: A ...)
+2026-06-11 14:28:45,919 [INFO]   lot    2/61 (50 symbols, ex: ADTN ...)
+2026-06-11 14:28:45,979 [INFO]   lot    3/61 (50 symbols, ex: AKAM ...)
+2026-06-11 14:28:46,047 [INFO]   lot    4/61 (50 symbols, ex: AMRX ...)
+2026-06-11 14:28:46,109 [INFO]   lot    5/61 (50 symbols, ex: ARDX ...)
+2026-06-11 14:28:46,173 [INFO]   lot    6/61 (50 symbols, ex: ATRC ...)
+2026-06-11 14:28:46,237 [INFO]   lot    7/61 (50 symbols, ex: BAH ...)
+2026-06-11 14:28:46,298 [INFO]   lot    8/61 (50 symbols, ex: BETR ...)
+2026-06-11 14:28:46,364 [INFO]   lot    9/61 (50 symbols, ex: BLMN ...)
+2026-06-11 14:28:46,424 [INFO]   lot   10/61 (50 symbols, ex: BTDR ...)
+2026-06-11 14:28:46,486 [INFO]   lot   11/61 (50 symbols, ex: CARG ...)
+2026-06-11 14:28:46,548 [INFO]   lot   12/61 (50 symbols, ex: CENTA ...)
+2026-06-11 14:28:46,610 [INFO]   lot   13/61 (50 symbols, ex: CLF ...)
+2026-06-11 14:28:46,675 [INFO]   lot   14/61 (50 symbols, ex: COLL ...)
+2026-06-11 14:28:46,738 [INFO]   lot   15/61 (50 symbols, ex: CRWV ...)
+2026-06-11 14:28:46,802 [INFO]   lot   16/61 (50 symbols, ex: CWT ...)
+2026-06-11 14:28:46,869 [INFO]   lot   17/61 (50 symbols, ex: DIAX ...)
+2026-06-11 14:28:46,934 [INFO]   lot   18/61 (50 symbols, ex: DSU ...)
+2026-06-11 14:28:46,999 [INFO]   lot   19/61 (50 symbols, ex: EIKN ...)
+2026-06-11 14:28:47,063 [INFO]   lot   20/61 (50 symbols, ex: ERIE ...)
+2026-06-11 14:28:47,128 [INFO]   lot   21/61 (50 symbols, ex: EXTR ...)
+2026-06-11 14:28:47,194 [INFO]   lot   22/61 (50 symbols, ex: FIHL ...)
+2026-06-11 14:28:47,263 [INFO]   lot   23/61 (50 symbols, ex: FRSH ...)
+2026-06-11 14:28:47,329 [INFO]   lot   24/61 (50 symbols, ex: GDOT ...)
+2026-06-11 14:28:47,395 [INFO]   lot   25/61 (50 symbols, ex: GNRC ...)
+2026-06-11 14:28:47,460 [INFO]   lot   26/61 (50 symbols, ex: HACQU ...)
+2026-06-11 14:28:47,524 [INFO]   lot   27/61 (50 symbols, ex: HNGE ...)
+2026-06-11 14:28:47,593 [INFO]   lot   28/61 (50 symbols, ex: HWM ...)
+2026-06-11 14:28:47,661 [INFO]   lot   29/61 (50 symbols, ex: IMRX ...)
+2026-06-11 14:28:47,727 [INFO]   lot   30/61 (50 symbols, ex: ISTR ...)
+2026-06-11 14:28:47,793 [INFO]   lot   31/61 (50 symbols, ex: KBH ...)
+2026-06-11 14:28:47,857 [INFO]   lot   32/61 (50 symbols, ex: KRO ...)
+2026-06-11 14:28:47,921 [INFO]   lot   33/61 (50 symbols, ex: LFUS ...)
+2026-06-11 14:28:47,986 [INFO]   lot   34/61 (50 symbols, ex: LSCC ...)
+2026-06-11 14:28:48,050 [INFO]   lot   35/61 (50 symbols, ex: MBIN ...)
+2026-06-11 14:28:48,116 [INFO]   lot   36/61 (50 symbols, ex: MHK ...)
+2026-06-11 14:28:48,179 [INFO]   lot   37/61 (50 symbols, ex: MRP ...)
+2026-06-11 14:28:48,244 [INFO]   lot   38/61 (50 symbols, ex: NAMS ...)
+2026-06-11 14:28:48,309 [INFO]   lot   39/61 (50 symbols, ex: NJR ...)
+2026-06-11 14:28:48,377 [INFO]   lot   40/61 (50 symbols, ex: NTNX ...)
+2026-06-11 14:28:48,454 [INFO]   lot   41/61 (50 symbols, ex: ODD ...)
+2026-06-11 14:28:48,520 [INFO]   lot   42/61 (50 symbols, ex: OSCR ...)
+2026-06-11 14:28:48,587 [INFO]   lot   43/61 (50 symbols, ex: PCRX ...)
+2026-06-11 14:28:48,654 [INFO]   lot   44/61 (50 symbols, ex: PIPR ...)
+2026-06-11 14:28:48,719 [INFO]   lot   45/61 (50 symbols, ex: PRGS ...)
+2026-06-11 14:28:48,784 [INFO]   lot   46/61 (50 symbols, ex: QRVO ...)
+2026-06-11 14:28:48,850 [INFO]   lot   47/61 (50 symbols, ex: RH ...)
+2026-06-11 14:28:48,917 [INFO]   lot   48/61 (50 symbols, ex: RTAC ...)
+2026-06-11 14:28:48,982 [INFO]   lot   49/61 (50 symbols, ex: SCSC ...)
+2026-06-11 14:28:49,049 [INFO]   lot   50/61 (50 symbols, ex: SITE ...)
+2026-06-11 14:28:49,117 [INFO]   lot   51/61 (50 symbols, ex: SOLV ...)
+2026-06-11 14:28:49,185 [INFO]   lot   52/61 (50 symbols, ex: STOK ...)
+2026-06-11 14:28:49,248 [INFO]   lot   53/61 (50 symbols, ex: TBBK ...)
+2026-06-11 14:28:49,318 [INFO]   lot   54/61 (50 symbols, ex: TIGR ...)
+2026-06-11 14:28:49,387 [INFO]   lot   55/61 (50 symbols, ex: TRNS ...)
+2026-06-11 14:28:49,452 [INFO]   lot   56/61 (50 symbols, ex: UA ...)
+2026-06-11 14:28:49,518 [INFO]   lot   57/61 (50 symbols, ex: UTI ...)
+2026-06-11 14:28:49,583 [INFO]   lot   58/61 (50 symbols, ex: VNET ...)
+2026-06-11 14:28:49,654 [INFO]   lot   59/61 (50 symbols, ex: WCN ...)
+2026-06-11 14:28:49,726 [INFO]   lot   60/61 (50 symbols, ex: WSM ...)
+2026-06-11 14:28:49,798 [INFO]   lot   61/61 (25 symbols, ex: YUM ...)
+2026-06-11 14:28:49,876 [INFO]   total lignes OHLCV collectees : 859,633
+2026-06-11 14:28:49,903 [INFO] Jointure (left) sur (date, symbol) ...
+2026-06-11 14:28:50,093 [INFO]   lignes en sortie        : 859,633
+2026-06-11 14:28:50,093 [INFO]   lignes avec OHLC matche : 859,633
+2026-06-11 14:28:50,093 [INFO]   lignes SANS match       : 0 (0.00%)
+2026-06-11 14:28:50,093 [INFO] Ecriture du CSV enrichi : /app/working/workspaces/FinCodeur95/duckdb/Features_Pente/test_features_with_predictions_ohlcv.csv
+2026-06-11 14:28:55,717 [INFO]   taille fichier : 156.2 Mo
+2026-06-11 14:28:55,717 [INFO] === Enrichissement termine ===
+2026-06-11 14:28:55,717 [INFO]   duree totale     : 0.2 min
+2026-06-11 14:28:55,717 [INFO]   symboles traites : 3,025
+2026-06-11 14:28:55,717 [INFO]   taux de match    : 100.00%

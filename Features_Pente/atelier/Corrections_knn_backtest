@@ -1,0 +1,52 @@
+Voici les corrections à apporter dans le programme knn_backtest.py 
+
+Problème :
+La simulation utilise des nombres flottants (float) avec une précision infinie pour des variables qui sont, par nature, discrètes et limitées dans le monde réel (prix d'actifs, capital disponible, taille des positions). Cette approche crée une "dérive de précision" (precision drift) où les valeurs accumulent des décimales irréalistes. Cela contrevient à la rigueur financière : un prix ou un montant d'argent ne peut pas avoir une infinité de chiffres après la virgule ; il doit être traité comme une valeur discrète (ex: 2 décimales).
+
+Solution :
+Implémenter une "discrétisation" des variables financières au sein du moteur de calcul. Au lieu de laisser les erreurs de flottants s'accumuler, on impose un arrondi strict à chaque étape de transaction pour que l'état de la simulation (capital et positions) soit toujours cohérent avec la réalité monétaire.
+
+Étapes détaillées d'implémentation :
+
+1. Discrétisation des Prix : Modifier le moteur pour que tout prix utilisé dans un calcul ou stocké dans une position (entry_open, exit_price, sl_price, tp_price) soit systématiquement arrondi à 2 décimales avant toute opération.
+2. Discrétisation du Capital et des Tailles : Après chaque transaction (ouverture ou clôture de position), appliquer un arrondi strict à 2 décimales sur le capital restant (capital) et sur la taille de la position (size). Cela garantit que l'argent "virtuel" dans la simulation suit exactement les mêmes règles que l'argent réel.
+3. Uniformisation du cycle de calcul : S'assurer que cette règle d'arrondi est appliquée à chaque itération du loop de simulation, empê-t-ant ainsi toute accumulation de résidus de calcul (les fameuses décimales infinies).
+
+Problème :
+La politique actuelle de taille de position utilise un tirage aléatoire entre $2500$ et $5000$, ce qui ne permet pas d'engager le capital de manière structurée. La stratégie doit passer d'un mode "aléatoire" à un mode "déploiement par lots" pour maximimiser l'exposition au marché tout en respectant des contraintes de taille minimale et de plafond par trade.
+
+Solution :
+Implémenter une règle de dimensionnement basée sur des tranches de capital de $5000$, avec un traitement spécifique du reliquat final, afin de s'assurer que le capital est déployé de manière optimale et cohérente avec les prix unitaires.
+
+Étapes détaillées d'implémentation :
+
+1. Définition des paramètres de la règle :
+  - PLAFOND_LOT = 5000 (Cible de taille par trade).
+  - SEUIL_MINIMAL = 2500 (Seuil de rentabilité du lot final).
+2. Calcul de la cible de transaction ($T$) :
+Pour chaque nouveau signal, on calcule d'abord le montant maximal que l'on souhaite investir :
+$$T = \min(\text{PLAFOND_LOT}, \text{capital_restant})$$
+3. Condition de filtrage (Seuil de survie) :
+Si $T < \text{SEUIL_MINIMAL}$, on ne prend p).4. Calcul du nombre d'unités ($N$) et de laOn calcule le nombre maximal d'actions entièc ce montant cible, puis on recalcule lataille exacte pour respecter la discrétisati
+  - $N = \lfloor T / \text{Prix_unitaire} \r
+  - $S = N \times \text{Prix_unitaire}$
+5. Vérification de cohérence :On s'assure que $S$ est bien $\le T$, et donl et du plafond de $5000$ est respectée parconstruction.
+
+Problème :
+Le fichier knn_backtest.equity.csv est actuellement ambigu et difficile à interpréter. Il sépare le capital liquide (capital_libre) du capital engagé (capital_investi), mais ne fournit pas de vue explicite sur la valeur totale du portefeuille (Total Equity). Cela rend l'analyse de la performance globale confuse, car on ne voit pas comment les positions ouvertes contribuent à la richesse totale avant leur clôture. De plus, le cum_pnl est présenté de manière isolée sans lien direct avec la valeur de marché des positions en cours.
+
+Solution :
+Restructurer le fichier d'équité pour suivre un standard financier professionnel. L'objectif est de passer d'une vue "comptable" (cash vs engagé) à une vue "performance" (valeur totale du portefeuille), incluant la valeur de marché des positions ouvertes et l'évolution quotidienne de la richesse.
+
+Étapes détaillées d'implémentation :
+
+1. Redéfinition de la structure des colonnes : Adopter un format composé des colonnes suivantes :
+  - date : La date du jour.
+  - total_equity : Valeur totale du compte (Cash + Valeur actuelle des positions ouvertes).
+  - cash : Capital liquide disponible pour de nouveaux trades.
+  - market_value : Somme de la valeur actuelle des positions encore ouvertes.
+  - n_positions : Nombre de positions actives à cette date.
+  - daily_pnl : Profit ou perte réalisé uniquement sur les trades clôturés durant la journée.
+2. Calcul de la Valeur de Marché (market_value) : Pour chaque jour, calculer la somme des montants investis dans les positions ouvertes (le "cost basis" des positions).
+3. Mise à jour de l'Équité Totale (total_equity) : Calculer pour chaque ligne : total_equity = cash + market_value. C'est cette colonne qui servira à tracer la courbe de performance réelle.
+4. Calcul du PnL Journalier (daily_pnl) : Calculer la différence entre l'équité totale du jour $J$ et celle du jour $J-1$. Cela permet d'analyser la volatilité des gains/pertes au quotidien.

@@ -1,0 +1,24 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"workbench.colorTheme": "Solarized Light",
+		"workbench.colorCustomizations": {
+    // Indique que les modifications s'appliquent uniquement à Tokyo Night
+        	"[Solarized Light]": {
+				"sideBar.background": "#ece8b5",
+				"editorCursor.foreground": "#ff00ff",        // Exemple : couleur du curseur (ex: rose/violet flash)
+				"editor.cursorBlinking": "smooth",           // Optionnel : style de clignotement fluide
+				"editor.cursorStyle": "block",
+				"editor.background": "#ece8b5",
+            	"editorCursor.foreground": "#ff00ff",      // Change la couleur du curseur (ex: rose/violet flash)
+            	"editor.cursorBlinking": "smooth",          // Optionnel : style de clignotement fluide
+            	"editor.cursorStyle": "block",
+    // Ici, vous modifiez les couleurs de l'interface du workspace
+            	"statusBar.background": "#c7f1bc",         // Exemple : barre de statut violet intermédiaire
+            	"activityBar.background": "#35327a"         // Exemple : barre latérale violette
+    }
+}

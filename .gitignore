@@ -1,0 +1,13 @@
+__pycache__/
+Features_Pente/*.csv
+Features_Pente/**/*.csv
+Features_Pente_Walk_Forward/*.csv
+Features_Pente_Walk_Forward/**/*.csv
+Sauve_Features_Pente_Walk_Forward/*.csv
+Sauve_Features_Pente_Walk_Forward/**/*.csv
+/Paper_Trading/**/*.csv
+/Paper_Trading/**/*.csv.gz
+/Paper_Trading/model/knn_model.joblib
+*.db
+*.bak
+.envrc

@@ -1,0 +1,59 @@
+2026-06-16 08:46:45,739 [INFO] === knn_backtest START ===
+2026-06-16 08:46:45,739 [INFO]   capital_initial  =  30,000.00
+2026-06-16 08:46:45,740 [INFO]   capital_engage   =  15,000.00
+2026-06-16 08:46:45,740 [INFO]   TP=1.500%  SL=0.600%  lot=5000  min=2500  seed=42
+2026-06-16 08:46:45,740 [INFO] Chargement : /app/working/workspaces/FinCodeur95/duckdb/Features_Pente/test_features_with_predictions_ohlcv.csv
+2026-06-16 08:46:46,332 [INFO]   859,633 lignes | 295 dates | 3025 symbols | 2025-03-25 -> 2026-05-27
+2026-06-16 08:46:46,332 [INFO] Indexation ...
+2026-06-16 08:46:55,696 [INFO]   295 dates
+2026-06-16 08:46:55,698 [INFO]   j 21/295 2025-04-23 | pos= 0 cash= 16,169.78 exp0=    0.00 dep=14,954.10 cand=1967 miss=11
+2026-06-16 08:46:55,700 [INFO]   j 41/295 2025-05-21 | pos= 1 cash= 16,522.54 exp0=4,969.26 dep=9,960.18 cand=1871 miss=0
+2026-06-16 08:46:55,702 [INFO]   j 61/295 2025-06-20 | pos= 0 cash= 17,590.50 exp0=    0.00 dep=14,974.40 cand=1699 miss=1
+2026-06-16 08:46:55,704 [INFO]   j 81/295 2025-07-21 | pos= 0 cash= 18,233.30 exp0=    0.00 dep=14,905.68 cand=1391 miss=0
+2026-06-16 08:46:55,705 [INFO]   j101/295 2025-08-18 | pos= 0 cash= 19,019.75 exp0=    0.00 dep=14,930.04 cand=1518 miss=0
+2026-06-16 08:46:55,707 [INFO]   j121/295 2025-09-16 | pos= 1 cash= 19,186.54 exp0=4,998.56 dep=9,993.16 cand=1502 miss=0
+2026-06-16 08:46:55,709 [INFO]   j141/295 2025-10-14 | pos= 0 cash= 19,669.64 exp0=    0.00 dep=14,642.08 cand=1613 miss=0
+2026-06-16 08:46:55,711 [INFO]   j161/295 2025-11-11 | pos= 2 cash= 20,180.51 exp0=9,923.54 dep=4,992.80 cand=1630 miss=0
+2026-06-16 08:46:55,713 [INFO]   j181/295 2025-12-10 | pos= 0 cash= 21,425.13 exp0=    0.00 dep=14,972.14 cand=1611 miss=0
+2026-06-16 08:46:55,714 [INFO]   j201/295 2026-01-09 | pos= 2 cash= 22,787.29 exp0=    0.00 dep=14,978.70 cand=1601 miss=0
+2026-06-16 08:46:55,716 [INFO]   j221/295 2026-02-09 | pos= 0 cash= 23,808.03 exp0=    0.00 dep=14,821.66 cand=1613 miss=0
+2026-06-16 08:46:55,718 [INFO]   j241/295 2026-03-10 | pos= 0 cash= 23,882.82 exp0=    0.00 dep=14,971.66 cand=1738 miss=0
+2026-06-16 08:46:55,720 [INFO]   j261/295 2026-04-08 | pos= 0 cash= 25,673.42 exp0=    0.00 dep=14,393.05 cand=1817 miss=1
+2026-06-16 08:46:55,722 [INFO]   j281/295 2026-05-06 | pos= 0 cash= 26,067.25 exp0=    0.00 dep=14,950.42 cand=1840 miss=2
+2026-06-16 08:46:55,757 [INFO] Trades : 764 | Positions en cours fin : 0
+2026-06-16 08:46:55,765 [INFO] Summary -> /app/working/workspaces/FinCodeur95/duckdb/Features_Pente/knn_backtest.summary.csv
+2026-06-16 08:46:55,765 [INFO] === Metriques cles ===
+2026-06-16 08:46:55,765 [INFO]   capital_initial                      =    30,000.0000
+2026-06-16 08:46:55,765 [INFO]   capital_engage_max                   =    15,000.0000
+2026-06-16 08:46:55,765 [INFO]   capital_final                        =    41,317.2400
+2026-06-16 08:46:55,765 [INFO]   pnl_total                            =    11,317.2400
+2026-06-16 08:46:55,765 [INFO]   retour_pct                           =        37.7241
+2026-06-16 08:46:55,765 [INFO]   n_trades                             = 764
+2026-06-16 08:46:55,765 [INFO]   n_wins                               = 326
+2026-06-16 08:46:55,765 [INFO]   n_losses                             = 438
+2026-06-16 08:46:55,765 [INFO]   win_rate_pct                         =        42.6702
+2026-06-16 08:46:55,765 [INFO]   gain_moyen                           =        75.4708
+2026-06-16 08:46:55,765 [INFO]   perte_moyenne                        =       -30.3339
+2026-06-16 08:46:55,765 [INFO]   ratio_gain_perte                     =         1.8518
+2026-06-16 08:46:55,765 [INFO]   esperance_par_trade                  =        14.8131
+2026-06-16 08:46:55,765 [INFO]   duree_moyenne_jours                  =         0.2186
+2026-06-16 08:46:55,765 [INFO]   duree_mediane_jours                  =         0.0000
+2026-06-16 08:46:55,765 [INFO]   duree_max_jours                      = 34
+2026-06-16 08:46:55,765 [INFO]   n_same_day                           = 700
+2026-06-16 08:46:55,765 [INFO]   n_multi_day                          = 64
+2026-06-16 08:46:55,765 [INFO]   pnl_same_day                         =    10,072.4800
+2026-06-16 08:46:55,765 [INFO]   pnl_multi_day                        =     1,244.7600
+2026-06-16 08:46:55,765 [INFO]   n_sl_gap                             = 7
+2026-06-16 08:46:55,765 [INFO]   pnl_sl_gap                           =      -477.4600
+2026-06-16 08:46:55,765 [INFO]   n_tp_gap                             = 7
+2026-06-16 08:46:55,765 [INFO]   pnl_tp_gap                           =       830.1700
+2026-06-16 08:46:55,765 [INFO]   max_perte_journaliere_eur            =       238.3400
+2026-06-16 08:46:55,765 [INFO]   max_drawdown_cumul_eur               =       444.3900
+2026-06-16 08:46:55,765 [INFO]   n_positions_ouvertes_fin             = 0
+2026-06-16 08:46:55,765 [INFO]   pnl_positions_ouvertes_fin           =         0.0000
+2026-06-16 08:46:55,766 [INFO]   seed                                 = 42
+2026-06-16 08:46:55,766 [INFO]   tp_pct                               =         1.5000
+2026-06-16 08:46:55,766 [INFO]   sl_pct                               =         0.6000
+2026-06-16 08:46:55,766 [INFO]   plafond_lot                          =     5,000.0000
+2026-06-16 08:46:55,766 [INFO]   seuil_min                            =     2,500.0000
+2026-06-16 08:46:55,766 [INFO] === DONE en 10.0 s ===
