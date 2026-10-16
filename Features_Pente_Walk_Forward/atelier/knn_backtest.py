@@ -394,8 +394,10 @@ def run_backtest(
                         # cout positif = defavorable (achat plus cher, vente moins chere)
                         slippage_cout = round((entry_exec - entry_theo) * N
                                               + (ep_sd_theo - ep_sd) * N, 2)
-                        # pnl brut : meme formule sur les prix theoriques
-                        pnl_brut = round(S * (ep_sd_theo / entry_theo - 1.0), 2)
+                        # pnl brut : PnL aux prix theoriques avec le MEME nombre
+                        # d'actions que le trade reel (N) : N*(P_sortie_theo-P_entree_theo).
+                        # Identique a l'ancienne formule quand entry_exec==entry_theo.
+                        pnl_brut = round(N * (ep_sd_theo - entry_theo), 2)
 
                         journal.append({
                             "symbol": sym, "entry_date": day.date().isoformat(),
@@ -503,8 +505,10 @@ def run_backtest(
                 # cout positif = defavorable (achat plus cher, vente moins chere)
                 slippage_cout = round((entry_exec - entry_theo) * N
                                       + (exit_theo - exit_exec) * N, 2)
-                # pnl brut : meme formule sur les prix theoriques
-                pnl_brut = round(pos["size"] * (exit_theo / entry_theo - 1.0), 2)
+                # pnl brut : PnL aux prix theoriques avec le MEME nombre
+                # d'actions que le trade reel (N) : N*(P_sortie_theo-P_entree_theo).
+                # Identique a l'ancienne formule quand entry_exec==entry_theo.
+                pnl_brut = round(N * (exit_theo - entry_theo), 2)
 
                 journal.append({
                     "symbol": sym,
