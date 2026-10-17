@@ -1,0 +1,9 @@
+--- Chargement des prédictions ---
+172965 lignes, 2847 symboles
+
+--- Enrichissement OHLCV (jour J) par symbole ---
+
+--- Fusion et sauvegarde ---
+Symboles traités : 2847/2847 (0 erreur(s) de table)
+Lignes en sortie : 172965 (dont 0 sans OHLCV apparié)
+Sauvegardé : /Users/pnan9/Upgr_Trading_System/Features_Pente_Walk_Forward/atelier/wf_sections/section10_20240620_20240916/test_features_with_predictions_ohlcv.csv

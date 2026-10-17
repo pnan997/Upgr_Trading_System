@@ -1,0 +1,7 @@
+{
+  "_comment": "Decoupage walk-forward en jours de bourse (dates distinctes de la base)",
+  "train_jours": 252,
+  "gap_jours": 10,
+  "test_jours": 61,
+  "pas_jours": 61
+}

@@ -5,8 +5,8 @@ import os
 def main():
     db_path = os.environ["TS_DB_PATH"]
     project_dir = os.path.join(os.environ["TS_ROOT"], "Features_Pente_Walk_Forward")
-    input_path = f'{project_dir}/test_features_with_predictions.csv'
-    output_path = f'{project_dir}/test_features_with_predictions_ohlcv.csv'
+    input_path  = os.environ.get("WF_ENRICH_IN",  f'{project_dir}/test_features_with_predictions.csv')
+    output_path = os.environ.get("WF_ENRICH_OUT", f'{project_dir}/test_features_with_predictions_ohlcv.csv')
 
     print("--- Chargement des prédictions ---")
     df_preds = pd.read_csv(input_path, parse_dates=['date'])

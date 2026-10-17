@@ -1,0 +1,16 @@
+--- Chargement des données ---
+Train: 688012 lignes, Test: 168328 lignes
+
+--- Rééquilibrage des classes (SMOTE) ---
+Nouveau volume d'entraînement (SMOTE) : 994612 lignes
+
+--- Prétraitement (StandardScaler) ---
+Scaling terminé.
+
+--- Optimisation du paramètre k (GridSearchCV) ---
+Meilleur k trouvé : 25
+
+--- Évaluation et Sauvegarde ---
+Sauvegarde des résultats dans /Users/pnan9/Upgr_Trading_System/Features_Pente_Walk_Forward/atelier/wf_sections/section05_20230403_20230629/test_features_with_predictions.csv
+Terminé.
+

@@ -80,8 +80,9 @@ import os
 # ===========================================================================
 # Chemins
 # ===========================================================================
-CSV_PATH     = Path(os.path.join(os.environ["TS_ROOT"], "Features_Pente_Walk_Forward",
-                    "test_features_with_predictions_ohlcv.csv"))
+CSV_PATH     = Path(os.environ.get("WF_BACKTEST_CSV",
+                    os.path.join(os.environ["TS_ROOT"], "Features_Pente_Walk_Forward",
+                                 "test_features_with_predictions_ohlcv.csv")))
 OUT_DIR      = CSV_PATH.parent
 LOG_PATH     = OUT_DIR / "knn_backtest.log"
 JOURNAL_PATH = OUT_DIR / "knn_backtest.journal.csv"

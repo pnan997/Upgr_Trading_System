@@ -1,0 +1,57 @@
+2026-10-17 11:15:53,080 [INFO] === knn_backtest START ===
+2026-10-17 11:15:53,081 [INFO]   capital_initial  =  30,000.00
+2026-10-17 11:15:53,081 [INFO]   capital_engage   =  15,000.00
+2026-10-17 11:15:53,081 [INFO]   TP=1.500%  SL=0.600%  lot=5000  min=2500  seed=42
+2026-10-17 11:15:53,081 [INFO] Chargement : /Users/pnan9/Upgr_Trading_System/Features_Pente_Walk_Forward/atelier/wf_sections/section14_20250611_20250908/test_features_with_predictions_ohlcv.csv
+2026-10-17 11:15:53,198 [INFO]   177,728 lignes | 61 dates | 2928 symbols | 2025-06-11 -> 2025-09-08
+2026-10-17 11:15:53,198 [INFO]   prix_min=9.0  frais=on  slippage=on
+2026-10-17 11:15:53,198 [INFO] Indexation ...
+2026-10-17 11:15:55,073 [INFO]   61 dates
+2026-10-17 11:15:55,079 [INFO]   filtre prix_min>=9.0 : 1399 -> 1228 candidats
+2026-10-17 11:15:55,079 [INFO]   j 21/61 2025-07-11 | pos= 2 cash= 15,155.02 exp0=4,998.72 dep=9,872.36 cand=1228 miss=0
+2026-10-17 11:15:55,084 [INFO]   filtre prix_min>=9.0 : 1581 -> 1369 candidats
+2026-10-17 11:15:55,084 [INFO]   j 41/61 2025-08-08 | pos= 0 cash= 15,599.16 exp0=    0.00 dep=14,900.24 cand=1369 miss=0
+2026-10-17 11:15:55,089 [INFO] Filtre prix_min>=9.0 : 11772 candidats retires au total, moyenne 199.53/jour (89108 -> 77336 sur 59 jours avec candidats)
+2026-10-17 11:15:55,095 [INFO] Trades : 120 | Positions en cours fin : 0
+2026-10-17 11:15:55,098 [INFO] Summary -> /Users/pnan9/Upgr_Trading_System/Features_Pente_Walk_Forward/atelier/wf_sections/section14_20250611_20250908/knn_backtest.summary.csv
+2026-10-17 11:15:55,098 [INFO] === Metriques cles ===
+2026-10-17 11:15:55,098 [INFO]   capital_initial                      =    30,000.0000
+2026-10-17 11:15:55,098 [INFO]   capital_engage_max                   =    15,000.0000
+2026-10-17 11:15:55,098 [INFO]   capital_final                        =    30,818.0800
+2026-10-17 11:15:55,098 [INFO]   pnl_total                            =       818.0800
+2026-10-17 11:15:55,098 [INFO]   retour_pct                           =         2.7269
+2026-10-17 11:15:55,098 [INFO]   n_trades                             = 120
+2026-10-17 11:15:55,098 [INFO]   n_wins                               = 51
+2026-10-17 11:15:55,098 [INFO]   n_losses                             = 69
+2026-10-17 11:15:55,098 [INFO]   win_rate_pct                         =        42.5000
+2026-10-17 11:15:55,099 [INFO]   gain_moyen                           =        70.7551
+2026-10-17 11:15:55,099 [INFO]   perte_moyenne                        =       -40.4413
+2026-10-17 11:15:55,099 [INFO]   ratio_gain_perte                     =         1.2932
+2026-10-17 11:15:55,099 [INFO]   esperance_par_trade                  =         6.8172
+2026-10-17 11:15:55,099 [INFO]   duree_moyenne_jours                  =         0.7250
+2026-10-17 11:15:55,099 [INFO]   duree_mediane_jours                  =         0.0000
+2026-10-17 11:15:55,099 [INFO]   duree_max_jours                      = 41
+2026-10-17 11:15:55,099 [INFO]   n_same_day                           = 102
+2026-10-17 11:15:55,099 [INFO]   n_multi_day                          = 18
+2026-10-17 11:15:55,099 [INFO]   pnl_same_day                         =       405.7800
+2026-10-17 11:15:55,099 [INFO]   pnl_multi_day                        =       412.2800
+2026-10-17 11:15:55,099 [INFO]   n_sl_gap                             = 1
+2026-10-17 11:15:55,099 [INFO]   pnl_sl_gap                           =      -151.6700
+2026-10-17 11:15:55,099 [INFO]   n_tp_gap                             = 6
+2026-10-17 11:15:55,099 [INFO]   pnl_tp_gap                           =       444.9700
+2026-10-17 11:15:55,099 [INFO]   pnl_brut_total                       =     1,679.4300
+2026-10-17 11:15:55,099 [INFO]   total_slippage                       =       689.6000
+2026-10-17 11:15:55,099 [INFO]   pnl_apres_slippage_total             =       989.8300
+2026-10-17 11:15:55,099 [INFO]   total_frais                          =       171.7600
+2026-10-17 11:15:55,099 [INFO]   frais_moyen_par_trade_pct_lot        =         0.0288
+2026-10-17 11:15:55,099 [INFO]   pnl_net_total                        =       818.0600
+2026-10-17 11:15:55,099 [INFO]   max_perte_journaliere_eur            =       135.3800
+2026-10-17 11:15:55,099 [INFO]   max_drawdown_cumul_eur               =       302.4300
+2026-10-17 11:15:55,099 [INFO]   n_positions_ouvertes_fin             = 0
+2026-10-17 11:15:55,099 [INFO]   pnl_positions_ouvertes_fin           =         0.0000
+2026-10-17 11:15:55,099 [INFO]   seed                                 = 42
+2026-10-17 11:15:55,099 [INFO]   tp_pct                               =         1.5000
+2026-10-17 11:15:55,099 [INFO]   sl_pct                               =         0.6000
+2026-10-17 11:15:55,099 [INFO]   plafond_lot                          =     5,000.0000
+2026-10-17 11:15:55,099 [INFO]   seuil_min                            =     2,500.0000
+2026-10-17 11:15:55,099 [INFO] === DONE en 2.0 s ===

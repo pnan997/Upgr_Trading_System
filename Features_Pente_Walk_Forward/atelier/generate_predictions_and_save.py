@@ -9,9 +9,9 @@ import os
 def main():
     # kNN with SMOTE (Synthetic Minority Over-sampling Technique) to handle imbalanced data.
     base_path = os.path.join(os.environ["TS_ROOT"], "Features_Pente_Walk_Forward")
-    train_path = f'{base_path}/train_features.csv'
-    test_path = f'{base_path}/test_features.csv'
-    output_path = f'{base_path}/test_features_with_predictions.csv'
+    train_path  = os.environ.get("WF_TRAIN_PATH",  f'{base_path}/train_features.csv')
+    test_path   = os.environ.get("WF_TEST_PATH",   f'{base_path}/test_features.csv')
+    output_path = os.environ.get("WF_PRED_OUT",    f'{base_path}/test_features_with_predictions.csv')
 
     print(f"--- Chargement des données ---")
     df_train = pd.read_csv(train_path)
@@ -37,7 +37,7 @@ def main():
     print(f"--- Optimisation du paramètre k (GridSearchCV) ---")
     knn = KNeighborsClassifier()
     param_grid = {'n_neighbors': range(1, 26)}
-    grid_search = GridSearchCV(knn, param_grid, cv=5, scoring='f1')
+    grid_search = GridSearchCV(knn, param_grid, cv=5, scoring='f1', n_jobs=-1)
     grid_search.fit(X_train_scaled, y_train_resampled)
 
     print(f"Meilleur k trouvé : {grid_search.best_params_['n_neighbors']}\n")
